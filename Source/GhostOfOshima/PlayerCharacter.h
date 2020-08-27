@@ -3,11 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Character.h"
+#include "RpgCharacter.h"
 #include "PlayerCharacter.generated.h"
 
 UCLASS()
-class GHOSTOFOSHIMA_API APlayerCharacter : public ACharacter
+class GHOSTOFOSHIMA_API APlayerCharacter : public ARpgCharacter
 {
 	GENERATED_BODY()
 
@@ -22,10 +22,4 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
-	void MoveForward(float Value);
-	void MoveRight(float Value);
 };

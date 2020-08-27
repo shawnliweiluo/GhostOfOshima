@@ -25,27 +25,4 @@ void APlayerCharacter::Tick(const float DeltaTime)
 
 }
 
-// Called to bind functionality to input
-void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-}
-
-void APlayerCharacter::MoveForward(const float Value)
-{
-    if (Value == 0.0f)
-        return;
-
-    AddMovementInput(GetActorForwardVector(), Value);
-}
-
-void APlayerCharacter::MoveRight(const float Value)
-{
-    if (Value == 0.0f)
-        return;
-
-    AddMovementInput(GetActorRightVector(), Value);
-}
-
 

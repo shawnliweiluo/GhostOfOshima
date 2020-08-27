@@ -43,12 +43,12 @@ void AMyPlayerController::Jump()
     PlayerCharacter->Jump();
 }
 
-void AMyPlayerController::Turn(float Value)
+void AMyPlayerController::Turn(const float Value)
 {
-    PlayerCharacter->AddControllerYawInput(Value);
+    PlayerCharacter->Turn(Value);
 }
 
-void AMyPlayerController::LookUp(float Value)
+void AMyPlayerController::LookUp(const float Value)
 {
-    PlayerCharacter->AddControllerPitchInput(Value);
+    PlayerCharacter->LookUp(Value);
 }
