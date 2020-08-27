@@ -17,14 +17,16 @@ class GHOSTOFOSHIMA_API AMyPlayerController : public APlayerController
 	GENERATED_BODY()
 	
 protected:
-	void BeginPlay() override;
-	void Tick(float DeltaSeconds) override;
-	void SetupInputComponent() override;
+	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaSeconds) override;
+	virtual void SetupInputComponent() override;
 
 public:
 	void MoveForward(float Value);
 	void MoveRight(float Value);
 	void Jump();
+	void Turn(float Value);
+	void LookUp(float Value);
 
 private:
 	UPROPERTY()

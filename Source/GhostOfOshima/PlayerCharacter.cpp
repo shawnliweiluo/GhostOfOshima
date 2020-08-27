@@ -19,7 +19,7 @@ void APlayerCharacter::BeginPlay()
 }
 
 // Called every frame
-void APlayerCharacter::Tick(float DeltaTime)
+void APlayerCharacter::Tick(const float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
@@ -32,7 +32,7 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 }
 
-void APlayerCharacter::MoveForward(float Value)
+void APlayerCharacter::MoveForward(const float Value)
 {
     if (Value == 0.0f)
         return;
@@ -40,7 +40,7 @@ void APlayerCharacter::MoveForward(float Value)
     AddMovementInput(GetActorForwardVector(), Value);
 }
 
-void APlayerCharacter::MoveRight(float Value)
+void APlayerCharacter::MoveRight(const float Value)
 {
     if (Value == 0.0f)
         return;
