@@ -19,7 +19,14 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	int Hp;
+	UPROPERTY(EditAnywhere)
+	int CurrentHP = 100;
+	UPROPERTY(EditAnywhere)
+	int MaxHP = 100;
+	UPROPERTY(EditAnywhere)
+	int CurrentBlockGauge = 100;
+	UPROPERTY(EditAnywhere)
+	int MaxBlockGauge = 100;
 	
 public:	
 	// Called every frame
